@@ -33,7 +33,8 @@ from boto.compat import expanduser, ConfigParser, NoOptionError, NoSectionError,
 # /etc/boto.cfg and ~/.boto (which works on Windows and Unix).
 BotoConfigPath = '/etc/boto.cfg'
 BotoConfigLocations = [BotoConfigPath]
-UserConfigPath = os.path.join(expanduser('~'), '.boto')
+#UserConfigPath = os.path.join(expanduser('~'), '.boto')
+UserConfigPath = './.boto' # Use .boto files from current path
 BotoConfigLocations.append(UserConfigPath)
 
 # If there's a BOTO_CONFIG variable set, we load ONLY
